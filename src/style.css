@@ -13,7 +13,8 @@
     "app-ad app-ad app-ad app-ad app-ad app-ad"
     "cel cel cel cel cel cel"
     "driver driver driver driver driver driver"
-    "fare fare fare fare fare fare";
+    "fare fare fare fare fare fare"
+    "final final final final final final";
     margin: 0;
     padding: 0;
 }
@@ -47,16 +48,19 @@
     background: #f7b617;
     color: white;
     font-family: 'Gothic A1', sans-serif;
-    font-size: 1.5em;
+    font-size: 16pt;
+    font-weight: bold;
     grid-column-start: 2;
     grid-column-end: 7;
     grid-row-start: 4;
     grid-row-end: 5;
-    padding: 20px 20px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    margin-top: 120px;
 }
 
 .container .app-ad .ad-yellow img{
-    height: 10px;
+    height: 15px;
     width: auto;
 }
 
@@ -64,13 +68,28 @@
     margin-bottom: 5px;
 }
 
+.container .app-ad .ad-yellow button{
+    margin-top: 20px;
+}
+
 .container .cel{
     grid-area: cel;
     background: #f7b617;
     color: white;
     font-family: 'Gothic A1', sans-serif;
-    margin: 1px 0px;
-    padding: 40px;
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 90% 10%;
+}
+
+.container .cel .image-cel{
+    grid-column-start: auto;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 40px 40px 40px 40px;
+    margin: 30px 10px;
+    border: solid white;
+    border-width: 1px;
 }
 
 .container .cel .image-cel .uno{ 
@@ -81,6 +100,13 @@
 .container .cel .image-cel img{
     height: 200px;
     width: auto;
+}
+
+.container .cel .footer-cel{
+    grid-column-start: auto;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 10px;
 }
 
 .container .driver{
@@ -149,4 +175,80 @@
     border-radius: 3px; 
     padding: 8px 20px; 
     font-weight: bold;
+}
+
+.container .fare .map img{
+    height: auto;
+    width: 300px;
+    padding: 10px 10px;
+}
+
+.container .fare .map{
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 50px;
+}
+
+.container .final{
+    grid-area: final;
+    display: grid;
+    grid-template-columns: 50% repeat(2,auto);
+    grid-template-rows: repeat(3,auto);
+    background: #2b2b2b;
+    font-family: 'Gothic A1', sans-serif;
+    color: white;
+}
+
+.container .final .final-logo{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: whitesmoke;
+}
+
+.container .final .final-logo img{
+    padding:10px 10px 20px 10px;
+}
+
+.container .final .menu{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.container .final .menu li{
+    padding: 10px;
+    font-size: 10pt;
+}
+
+.container .final .icons{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.container .final .icons img{
+    width: 150px;
+    height: auto;
+    padding: 15px 10px 10px 10px;
+}
+
+.container .final .footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    font-size: 9pt;
+    padding: 10px;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: whitesmoke;
 }
