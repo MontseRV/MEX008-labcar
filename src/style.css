@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 5% repeat(5,auto);
+    grid-template-rows: repeat(6,auto);
+    grid-template-areas: 
+    "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
+    "app-ad app-ad app-ad app-ad app-ad app-ad"
+    "cel cel cel cel cel cel"
+    "driver driver driver driver driver driver"
+    "fare fare fare fare fare fare";
+    margin: 0;
+    padding: 0;
+}
+
+.container .nav-bar{
+    grid-area: nav-bar;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.container .nav-bar img{
+    margin-left: 20px;
+    width: 100px;
+    height: auto;
+}
+
+.container .app-ad{
+    grid-area: app-ad;
+    background: url("https://raw.githubusercontent.com/MontseRV/MEX008-labcar/rama-uno/images/taxi.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% repeat(5,auto);
+    grid-template-rows: repeat(5,auto);
+}
+
+.container .app-ad .ad-yellow{
+    background: #f7b617;
+    color: white;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 1.5em;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    padding: 20px 20px;
+}
+
+.container .app-ad .ad-yellow img{
+    height: 10px;
+    width: auto;
+}
+
+.container .app-ad .ad-yellow .p{
+    margin-bottom: 5px;
+}
+
+.container .cel{
+    grid-area: cel;
+    background: #f7b617;
+    color: white;
+    font-family: 'Gothic A1', sans-serif;
+    margin: 1px 0px;
+    padding: 40px;
+}
+
+.container .cel .image-cel .uno{ 
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.container .cel .image-cel img{
+    height: 200px;
+    width: auto;
+}
+
+.container .driver{
+    grid-area: driver;
+    background: url("https://raw.githubusercontent.com/MontseRV/MEX008-labcar/rama-uno/images/conduce.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(50,50,50);
+    background-blend-mode: soft-light;
+    height: 350px;
+    width: 100%;
+}
+
+.container .driver .driver-ad{
+    font-size: 1em;
+    color: white;
+    font-family: 'Gothic A1', sans-serif;
+    margin: 30px 0px;
+    padding: 40px;
+}
+
+.container .driver .driver-ad button{
+    background: #f7b617;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.container .fare{
+    grid-area: fare;
+    background: #f7b617;
+    font-family: 'Gothic A1', sans-serif;
+    color: white;
+    padding:40px 10px 25px 10px;
+}
+
+.container .fare h3{
+    padding:25px 5px;
+}
+
+.container .fare  p{
+    padding:15px 5px;
+}
+
+.container .fare img{
+    padding:0px 5px 5px 5px
+}
+
+.container .fare input{
+    background: #f7b617;
+    font-family: 'Gothic A1', sans-serif;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 5px; 
+    margin-left: 5px;
+}
+
+.container .fare button{
+    border: none;
+    border-radius: 3px; 
+    padding: 8px 20px; 
+    font-weight: bold;
+}
