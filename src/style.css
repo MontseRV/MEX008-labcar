@@ -32,6 +32,27 @@
     height: auto;
 }
 
+.container .nav-bar .menu-desktop{
+    grid-area: nav-bar;
+    display: grid;
+    grid-template-columns: 20% repeat(5,auto);
+    grid-template-rows: 100%;
+
+}
+
+.container .nav-bar .menu-desktop ul{
+    grid-column-start: 6;
+    grid-column-end: 7;
+}
+
+.container .nav-bar .menu-desktop ul li{
+    list-style: none;
+    display: inline;
+    font-family: 'Gothic A1', sans-serif;
+    padding: 25px;
+    /* margin-left: 80px; */
+}
+
 .container .app-ad{
     grid-area: app-ad;
     background: url("https://raw.githubusercontent.com/MontseRV/MEX008-labcar/rama-uno/images/taxi.jpg");
@@ -59,16 +80,16 @@
     margin-top: 120px;
 }
 
-.container .app-ad .ad-yellow img{
+.container .app-ad .ad-yellow .yellow-mobile img{
     height: 15px;
     width: auto;
 }
 
-.container .app-ad .ad-yellow .p{
+.container .app-ad .ad-yellow .yellow-mobile p{
     margin-bottom: 5px;
 }
 
-.container .app-ad .ad-yellow button{
+.container .app-ad .ad-yellow .yellow-mobile button{
     margin-top: 20px;
 }
 
@@ -132,10 +153,11 @@
 .container .driver .driver-ad button{
     background: #f7b617;
     color: white;
+    font-size: 1em;
     font-weight: bold;
     border: none;
     border-radius: 4px;
-    padding: 5px;
+    padding: 10px;
     margin-top: 10px;
 }
 
@@ -251,4 +273,127 @@
     border-top-style: solid;
     border-width: 1px;
     border-color: whitesmoke;
+}
+
+@media screen and (max-width: 778px){
+    .container .nav-bar .menu-desktop{
+        display: none;
+    }
+
+    .container .app-ad .ad-yellow .yellow-desktop{
+        display: none;
+    }
+
+    .container .cel .image-cel .cel-desktop{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 778px){
+    .container .nav-bar select{
+        display: none;
+    }
+
+    .container .app-ad .ad-yellow .yellow-mobile{
+        display: none;
+    }
+
+    .container .cel .footer-cel{
+        display:none;
+    }
+
+    .container .nav-bar .menu-desktop ul{
+        display: block;
+    }
+
+    .container .app-ad .ad-yellow .yellow-desktop{
+        display: block;
+    }
+
+
+    .container .app-ad{
+        grid-area: app-ad;
+        background: url("https://raw.githubusercontent.com/MontseRV/MEX008-labcar/rama-uno/images/taxi.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        height: 900px;
+        width: auto;
+    }
+
+    .container .app-ad .ad-yellow{
+        grid-column-start: 6;
+        grid-column-end: 7;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        margin:0;
+        padding:0;
+    }
+
+    .container .app-ad .ad-yellow .yellow-desktop{
+        padding: 20px;
+        font-weight: normal;
+    }
+
+    .container .app-ad .ad-yellow .yellow-desktop p{
+        padding: 5px;
+    }
+
+    .container .cel{
+        /* display:grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 100%; */
+    }
+
+    .container .cel .image-cel{
+        display:grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 100%;
+        /* padding: 40px 10px 40px 40px; */
+        margin: 30px 200px 10px 0px;
+    }
+
+    .container .cel .image-cel .uno{
+        display:none;
+    }
+
+    .container .cel .image-cel .header-cel img{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        height: 300px;
+        width: auto;
+        margin: 30px 100px 30px 60px;
+    }
+
+    .container .cel .image-cel .cel-desktop{
+        font-size: 16pt;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin: 20px 0px 30px 60px;
+    }
+
+    .container .driver{
+        grid-area: driver;
+        background: url("https://raw.githubusercontent.com/MontseRV/MEX008-labcar/rama-uno/images/conduce.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 550px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 33% 26% 40%;
+        grid-template-areas: "uno dos tres"
+    }
+    
+    .container .driver .driver-ad{
+        font-size: 14pt;
+        color: white;
+        font-family: 'Gothic A1', sans-serif;
+        margin: 30px 0px;
+        padding: 100px 40px 40px 40px;
+        grid-area: tres;
+        
+    }
+
 }
