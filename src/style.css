@@ -393,7 +393,12 @@
         margin: 30px 0px;
         padding: 100px 40px 40px 40px;
         grid-area: tres;
-        
+    }
+
+    .container .fare{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "tarifa mapa"
     }
 
 }
