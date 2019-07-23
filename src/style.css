@@ -199,10 +199,14 @@
     font-weight: bold;
 }
 
-.container .fare .map img{
+.container .fare .map .image1 img{
     height: auto;
     width: 300px;
     padding: 10px 10px;
+}
+
+.container .fare .map .image2{
+    display: none;
 }
 
 .container .fare .map{
@@ -287,6 +291,10 @@
     .container .cel .image-cel .cel-desktop{
         display: none;
     }
+
+    .container .final .menu2{
+        display: none;
+    }
 }
 
 
@@ -310,6 +318,7 @@
     .container .app-ad .ad-yellow .yellow-desktop{
         display: block;
     }
+
 
 
     .container .app-ad{
@@ -390,10 +399,105 @@
         font-size: 14pt;
         color: white;
         font-family: 'Gothic A1', sans-serif;
-        margin: 30px 0px;
-        padding: 100px 40px 40px 40px;
+        margin: 0px 0px;
+        padding: 120px 40px 40px 40px;
         grid-area: tres;
-        
+        background-color: rgba(0, 0, 0, 0.5)
     }
 
+    .container .fare{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "tarifa mapa"
+    }
+
+    .container .fare .first-part{
+        grid-area: tarifa;
+        padding: 80px;
+        font-size: 16pt;
+    }
+
+    .container .fare .map .image1{
+        display:none;
+    }
+    
+
+    .container .fare .map{
+        grid-area: mapa;
+    }
+
+    .container .fare .map .image2{
+        display: block;
+    }
+
+    .container .fare .map .image2 img{
+        height: 500px;
+        width: auto;
+        padding: 10px 10px;
+    }
+
+    .container .final{
+        display:grid;
+        grid-template-columns: 3;
+        grid-template-rows: 3;
+    }
+
+    .container .final .final-logo{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        border-bottom-style: solid;
+        border-width: 1px;
+        border-color: whitesmoke;
+    }
+
+    .container .final .final-logo img{
+        padding:80px 10px 20px 30px;
+    }
+
+    .container .final .menu{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 30px 10px 30px 400px;
+    }
+    
+    .container .final .menu li{
+        padding: 10px;
+        font-size: 10pt;
+        list-style: none;
+    }
+
+    .container .final .menu2{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 30px 30px 30px 10px;
+    }
+    
+    .container .final .menu2 li{
+        padding: 10px;
+        font-size: 10pt;
+        list-style: none;
+    }
+
+    .container .final .icons{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    
+    .container .final .icons img{
+        width: 170px;
+        height: auto;
+        padding: 15px 10px 10px 10px;
+    }
+
+    .container .final .footer{
+        padding: 20px 20px 100px 30px;
+    }
 }
